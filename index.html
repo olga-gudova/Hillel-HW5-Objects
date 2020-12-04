@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        
+        var user = {
+            name: 'Arkadiy',
+            surname: 'Ukupnik',
+            age: 67,
+            profession: 'singer',
+        };
+
+        function getValues(obj) {
+            var valuesArray = [];
+
+            for (var key in obj) {
+                valuesArray.push(obj[key]);                
+            }
+
+            return valuesArray;
+        }
+
+        console.log(getValues(user));
+
+        function getKeys(obj) {
+            var keysArray = [];
+
+            for (var key in obj) {
+                keysArray.push(key);                
+            }
+            
+            return keysArray;
+        }
+
+        console.log(getKeys(user));
+
+        function getEntries(obj) {
+            var entriesArray = [];
+
+            for (var key in obj) {
+                var innerArray = [];
+                
+                innerArray[0] = key;
+                innerArray[1] = obj[key];
+
+                entriesArray.push(innerArray);                
+            }
+            
+            return entriesArray;
+        }
+
+        console.log(getEntries(user));
+
+    </script>
+</body>
+</html>
